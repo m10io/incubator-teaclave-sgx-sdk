@@ -25,7 +25,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.  */
 
 #include "libunwind_i.h"
 
-HIDDEN unw_dyn_info_list_t _U_dyn_info_list;
+/* XXX TMC: Quick-and-dirty workaround for
+   apache/incubator-teaclave-sgx-sdk#313 (fixed properly upstream in
+   libunwind/libunwind#29e17d8d2ccbca07c423e3089a6d5ae8a1c9cb6e). */
+/* HIDDEN unw_dyn_info_list_t _U_dyn_info_list; */
 
 PROTECTED unw_word_t
 _U_dyn_info_list_addr (void)
